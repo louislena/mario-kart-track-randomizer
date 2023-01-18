@@ -10,35 +10,42 @@ random_number = random.randint(0, 21)
 
 x = random.sample(item, random_number) 
 
-#print(x)
+print(x)
 
-for i in range(7):
-    tracks = []
-    played_tracks = []
-    unplayed_tracks = []
+tracks = []
+played_tracks = []
+unplayed_tracks = []
 
-    with open("tracks.txt") as file:
-        for line in file:
-            tracks.append(line.rstrip())
+with open("tracks.txt") as file:
+    for line in file:
+        tracks.append(line.rstrip())
 
-    with open("played_tracks.txt") as file:
-        for line in file:
-            played_tracks.append(int(line.rstrip()))
+with open("played_tracks.txt") as file:
+    for line in file:
+        played_tracks = line.rstrip().split(",")
 
-    for index, track in enumerate(tracks):
-        if index in played_tracks: 
-            print("hei")
-        else:
-            unplayed_tracks.append(track)
+for index, track in enumerate(tracks):
+    if track not in played_tracks:
+        unplayed_tracks.append(track)
 
-    print(len(unplayed_tracks))
+for i in range(6):
 
-    random_number2 = random.randint(0,len(unplayed_tracks) - 1)
+    if not unplayed_tracks:
+        print("No more tracks")
+        break
 
-    print(unplayed_tracks[random_number2])
+    else:
+        random_number2 = random.randint(0,len(unplayed_tracks) - 1)
 
-    with open("played_tracks.txt", "a") as myfile:
-        myfile.write(str(random_number2) + "\n")
+        current_track = unplayed_tracks[random_number2]
+
+        unplayed_tracks.remove(current_track)
+
+        print(current_track)
+
+        with open("played_tracks.txt", "a") as myfile:
+            myfile.write(current_track + ",")
+
 
 
 
