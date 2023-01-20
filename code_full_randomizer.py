@@ -1,7 +1,7 @@
 import random
 
-print("Player 1")
-
+#PLAYER 1
+print("\n" + "Player 1")
 character = []
 chosen_character = []
 
@@ -11,8 +11,6 @@ with open("character.txt") as file:
 
 chosen_character = random.sample(character, 1) 
 print("Character:", (chosen_character))
-
-
 
 vehicle = []
 chosen_vehicle = []
@@ -24,8 +22,6 @@ with open("vehicle.txt") as file:
 chosen_vehicle = random.sample(vehicle, 1) 
 print("Vehicle:", (chosen_vehicle))
 
-
-
 wheels = []
 chosen_wheels = []
 
@@ -35,8 +31,6 @@ with open("wheels.txt") as file:
 
 chosen_wheels = random.sample(wheels, 1) 
 print("Wheels:", (chosen_wheels))
-
-
 
 gliders = []
 chosen_gliders = []
@@ -49,7 +43,8 @@ chosen_gliders = random.sample(gliders, 1)
 print("Glider:", (chosen_gliders))
 
 
-print("Player 2")
+#PLAYER 2
+print("\n" + "Player 2")
 character = []
 chosen_character = []
 
@@ -58,8 +53,6 @@ with open("character.txt") as file:
             character.append(line.rstrip())
 
 chosen_character = random.sample(character, 1) 
-
-
 print("Character:", (chosen_character))
 
 vehicle = []
@@ -70,7 +63,6 @@ with open("vehicle.txt") as file:
             vehicle.append(line.rstrip())
 
 chosen_vehicle = random.sample(vehicle, 1) 
-
 print("Vehicle:", (chosen_vehicle))
 
 wheels = []
@@ -81,7 +73,6 @@ with open("wheels.txt") as file:
             wheels.append(line.rstrip())
 
 chosen_wheels = random.sample(wheels, 1) 
-
 print("Wheels:", (chosen_wheels))
 
 gliders = []
@@ -92,27 +83,27 @@ with open("gliders.txt") as file:
             gliders.append(line.rstrip())
 
 chosen_gliders = random.sample(gliders, 1) 
-
 print("Glider:", (chosen_gliders))
 
+
+#ITEMS
 item = []
-
 with open("item_list.txt") as file:
     for line in file: 
             item.append(line.rstrip())
 
 random_number = random.randint(0, 21)
 
-chosen_item = random.sample(item, random_number) 
-
-print("Items:")
+chosen_item = random.sample(item, random_number)
+print("\n" + "Items:")
 print(chosen_item)
 
+
+#TRACKS
+print("\n" + "Tracks:")
 tracks = []
 played_tracks = []
 unplayed_tracks = []
-
-print("Tracks:")
 
 with open("tracks.txt") as file:
     for line in file:
@@ -143,3 +134,5 @@ for i in range(6):
 
         with open("played_tracks.txt", "a") as myfile:
             myfile.write(current_track + ",")
+
+print("\n")
