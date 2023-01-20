@@ -8,9 +8,9 @@ with open("item_list.txt") as file:
 
 random_number = random.randint(0, 21)
 
-x = random.sample(item, random_number) 
+chosen_item = random.sample(item, random_number) 
 
-print(x)
+print(chosen_item)
 
 tracks = []
 played_tracks = []
@@ -46,5 +46,13 @@ for i in range(6):
         with open("played_tracks.txt", "a") as myfile:
             myfile.write(current_track + ",")
 
+
+vehicle = []
+
+with open("vehicle.txt") as file:
+    for line in file: 
+            item.append(line.rstrip())
+
+random_vehicle = random.randint(0, )
 
 
