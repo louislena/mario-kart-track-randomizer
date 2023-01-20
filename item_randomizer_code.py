@@ -47,12 +47,6 @@ for i in range(6):
             myfile.write(current_track + ",")
 
 
-vehicle = []
 
-with open("vehicle.txt") as file:
-    for line in file: 
-            item.append(line.rstrip())
-
-random_vehicle = random.randint(0, )
 
 
