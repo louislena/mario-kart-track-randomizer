@@ -48,7 +48,3 @@ for i in range(6):
 
 
 
-
-
-#random_value = random.choices(item, k = random_number)
-#print(random_value)
