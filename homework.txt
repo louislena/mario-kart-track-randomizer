@@ -1,0 +1,25 @@
+Alle skal på en og samme nettside
+{
+    setup: {
+        "Character": "Yoshi",
+        "Vehicle": "Standard Bike",
+        "Wheels": "Cyber Slick",
+        "Glider": "Cloud Glider"
+    },
+    tracks: {
+        ...
+    }
+}
+
+
+
+Lage en "reset" som reseter tracks som er spilt 
+
+    Lage et nettside som reseter 
+    En metode (def navn greie) for å resete det (legges i track filen)
+    For å slette innhold i en fil:
+        with open("track_randomizer/played_tracks.txt", "w") as myfile:
+                    myfile.write("")
+
+    Hvis filen med baner blir full, reset og begynn på nytt 
+    Istedenfor å print no more track legg inn kode

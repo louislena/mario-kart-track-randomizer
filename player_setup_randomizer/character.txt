@@ -3,11 +3,12 @@ Luigi
 Peach	
 Yoshi
 Bowser	
-Donkey 
-Kong	Toad	
+Donkey Kong	
+Toad	
 Koopa Troopa
 Daisy	
-Shy Guy	Wario	
+Shy Guy	
+Wario	
 Waluigi
 Baby Mario	
 Baby Luigi	
