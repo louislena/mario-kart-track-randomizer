@@ -31,6 +31,6 @@ api.add_resource(RandomSetup, '/random-setup')
 
 
 if __name__ == "__main__":
-    app.run(port=8001, debug=True)
+    app.run()
 
 
