@@ -11,8 +11,6 @@ Alle skal på en og samme nettside
     }
 }
 
-
-
 Lage en "reset" som reseter tracks som er spilt 
 
     Lage et nettside som reseter 

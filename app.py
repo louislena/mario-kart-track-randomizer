@@ -4,7 +4,6 @@ from player_setup_randomizer.code_character_vehicle_wheels_gliders import player
 
 from item_randomizer.code_item_randomizer_code import item_randomizer
 
-
 from flask import Flask
 from flask_restful import Resource, Api
 
@@ -31,6 +30,4 @@ api.add_resource(RandomSetup, '/random-setup')
 
 
 if __name__ == "__main__":
-    app.run()
-
-
+    app.run(port=8000)
