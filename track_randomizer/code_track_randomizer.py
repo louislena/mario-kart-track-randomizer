@@ -22,9 +22,9 @@ def track_randomizer(number_of_tracks):
     for i in range(number_of_tracks):
 
         if not unplayed_tracks:
-            print("No more tracks")
-            break
-
+            reset_tracks()
+            return track_randomizer(number_of_tracks)
+            
         else:
             random_number2 = random.randint(0,len(unplayed_tracks) - 1)
 
@@ -38,3 +38,10 @@ def track_randomizer(number_of_tracks):
                 myfile.write(current_track + ",")
                 
     return response
+
+def reset_tracks():
+
+    with open("track_randomizer/played_tracks.txt", "w") as myfile:
+                    myfile.write("")
+
+    return "List reset complete <3"
