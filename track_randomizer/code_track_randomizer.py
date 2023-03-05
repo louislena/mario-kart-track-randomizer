@@ -9,14 +9,15 @@ def track_randomizer(number_of_tracks):
 
     with open("track_randomizer/tracks.txt") as file:
         for line in file:
-            tracks.append(line.rstrip())
+            track = line.split(",")
+            tracks.append({"Track":track[0],"Cup":track[1].rstrip()})
 
     with open("track_randomizer/played_tracks.txt") as file:
         for line in file:
             played_tracks = line.rstrip().split(",")
 
     for track in tracks:
-        if track not in played_tracks:
+        if track["Track"] not in played_tracks:
             unplayed_tracks.append(track)
 
     for i in range(number_of_tracks):
@@ -35,7 +36,7 @@ def track_randomizer(number_of_tracks):
             response.append(current_track)
 
             with open("track_randomizer/played_tracks.txt", "a") as myfile:
-                myfile.write(current_track + ",")
+                myfile.write(current_track["Track"] + ",")
                 
     return response
 
